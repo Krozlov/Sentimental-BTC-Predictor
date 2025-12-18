@@ -29,7 +29,15 @@ pip install -r requirements.txt
 1. Go to: https://newsapi.org/register
 2. Enter email (free tier = 100 requests/day, plenty!)
 3. Verify email
-4. **Save your API key** --> 5016d1659dfb4eef9be53e1f0fbc260c
+4. **Save your API key**
+
+News API key : 5016d1659dfb4eef9be53e1f0fbc260c
+CryptoPanic API key : 7aaa2e50ce410ce34d33d3dffac742c1c68c0f4c
+Twitter API key : oRmPsgVQbMKs0a2pYmZ3VO24Z
+Twitter API key secret : HDystLhFADIe93JySlu3Y4cnhba7LWJlKXq4ohEXzrCGvyVZKq
+Twitter access token : 12u3AVgmC5gJnFe4peUncoenPDsSdUbZ32qiVMoUZFu5enDe
+Twitter access token secret : NEqnUnVv6Vj9MhEqAPn2P0ivn6dPQX1Eq5DGvsRNGkFQk
+Twitter bearer token : AAAAAAAAAAAAAAAAAAAAAODx6AEAAAAAPdhgzft62nYiNv1U5VZ8q1XVj4g%3DHEpAlGyFMMTpdOr0up6TqnknEh65gWesT80TzQOq0AaFEGLjmi
 
 ---
 
