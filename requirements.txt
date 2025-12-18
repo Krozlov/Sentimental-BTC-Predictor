@@ -1,0 +1,25 @@
+# BTC Sentiment-Enhanced Predictor
+# Install with: pip install -r requirements.txt
+
+# Core data science libraries
+pandas>=1.5.0
+numpy>=1.23.0
+matplotlib>=3.6.0
+seaborn>=0.12.0
+
+# Machine learning
+scikit-learn>=1.2.0
+
+# Data collection
+requests>=2.28.0            # HTTP requests for APIs
+yfinance>=0.2.0             # Yahoo Finance for BTC data
+beautifulsoup4>=4.11.0      # Web scraping
+feedparser>=6.0.10          # RSS feed parsing
+lxml>=4.9.0                 # XML/HTML parser
+
+# Sentiment analysis
+vaderSentiment>=3.3.2       # VADER sentiment analyzer (no training needed!)
+
+# Utilities
+python-dateutil>=2.8.0
+urllib3>=1.26.0
