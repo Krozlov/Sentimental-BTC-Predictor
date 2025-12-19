@@ -1,8 +1,3 @@
-"""
-Sentiment Analyzer for Bitcoin Text Data
-Fixed and cleaned version with better error handling
-"""
-
 import pandas as pd
 import numpy as np
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer

@@ -1,8 +1,3 @@
-"""
-BTC Sentiment Data Collector - Focused on CryptoPanic & RSS
-Simplified and cleaned version with better error handling
-"""
-
 import requests
 import pandas as pd
 from datetime import datetime, timedelta
@@ -55,7 +50,7 @@ class SentimentCollector:
                 base_url = "https://cryptopanic.com/api/v2/posts/"
                 next_page = None
                 page_count = 0
-                max_pages = 20  # Limit to prevent infinite loops
+                max_pages = 20  
                 
                 while page_count < max_pages:
                     page_count += 1
@@ -325,7 +320,7 @@ class SentimentCollector:
                         continue
             
             print(f"    Scraped {len(posts)} posts successfully")
-            return posts[:100]  # Return max 100 posts
+            return posts[:100] 
             
         except Exception as e:
             print(f"    Scraping failed: {e}")
@@ -354,7 +349,7 @@ class SentimentCollector:
                 
                 items_collected = 0
                 
-                for entry in feed.entries[:200]:  # Increased from 100 to 200
+                for entry in feed.entries[:200]:  
                     try:
                         # Parse date
                         if hasattr(entry, 'published_parsed') and entry.published_parsed:
@@ -387,7 +382,7 @@ class SentimentCollector:
                         continue
                 
                 print(f"    ✓ Collected {items_collected} {source_name} articles")
-                time.sleep(1)  # Be respectful
+                time.sleep(1) 
                 
             except Exception as e:
                 print(f"    ✗ {source_name} failed: {str(e)[:50]}")

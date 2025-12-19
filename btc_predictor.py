@@ -1,7 +1,3 @@
-"""
-Fixed BTC Predictor with Sentiment Analysis
-Cleaned and improved error handling
-"""
 
 import pandas as pd
 import numpy as np
@@ -17,9 +13,7 @@ from datetime import datetime, timedelta
 
 warnings.filterwarnings('ignore')
 
-# ============================================================================
-# DATA LOADING FUNCTIONS
-# ============================================================================
+# Data Loading Functions
 
 def download_btc_data(days_back=3650):
     """Download BTC historical data from CoinGecko"""
@@ -82,12 +76,12 @@ def load_btc_data():
         
         if days_old > 7:
             print(f"⚠ Data is {days_old} days old. Updating...")
-            return download_btc_data(days_back=300)  # Changed from 3650 to 300
+            return download_btc_data(days_back=300)  
         
         return df
     else:
         print("📥 No local data found. Downloading...")
-        return download_btc_data(days_back=300)  # Changed from 3650 to 300
+        return download_btc_data(days_back=300) 
 
 
 def load_sentiment_data():
@@ -121,9 +115,7 @@ def load_sentiment_data():
     return df_sent
 
 
-# ============================================================================
-# FEATURE ENGINEERING FUNCTIONS
-# ============================================================================
+# Feature Engineering Functions
 
 def create_technical_indicators(df):
     """Create technical indicators"""
@@ -277,9 +269,7 @@ def create_features_and_targets(df, sentiment_features=[]):
     return X, Y, df_feat.index, available_features
 
 
-# ============================================================================
-# MODEL TRAINING FUNCTIONS
-# ============================================================================
+# Model Training Functions
 
 def train_and_evaluate(X_train, Y_train, X_test, Y_test, alpha=10000):
     """Train and evaluate Ridge regression model"""
@@ -367,9 +357,7 @@ def plot_comparison(dates_test, Y_test, baseline_pred, enhanced_pred):
     plt.show()
 
 
-# ============================================================================
-# MAIN FUNCTION
-# ============================================================================
+# Main Function
 
 def main():
     """Main execution"""
